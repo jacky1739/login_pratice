@@ -28,6 +28,9 @@ function login(e){
             const { token , expired } = res.data; //一種解構手法 (所寫)，當確定 dtat 裡面有這個值得時候就可以這樣寫
             // 將 token 存到 cookie~
             document.cookie = `hexSchool=${token}; expires=${new Date(expired)}`;
+            window.location = 'admin.html';
+        }else{
+            alert('請輸入正確的帳號密碼');
         }
     }).catch((err) => {
         console.log(err);
