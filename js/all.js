@@ -1,3 +1,6 @@
+// 帳號 jacky123789456@gmail.com    
+// 密碼 jacky2360960
+
 const api_path = 'jacky';
 const url = 'https://vue3-course-api.hexschool.io/';
 
@@ -27,7 +30,7 @@ function login(e){
             // const expired = res.data.expired;
             const { token , expired } = res.data; //一種解構手法 (所寫)，當確定 dtat 裡面有這個值得時候就可以這樣寫
             // 將 token 存到 cookie~
-            document.cookie = `hexSchool=${token}; expires=${new Date(expired)}`;
+            document.cookie = `hexToken=${token}; expires=${new Date(expired)}`;
             window.location = 'admin.html';
         }else{
             alert('請輸入正確的帳號密碼');
