@@ -22,6 +22,7 @@ let app = {
     },
     render() {
         const productList = document.querySelector('#productList');
+        const productCount = document.querySelector('#productCount');
         str = "",
         this.data.productsData.forEach((item, index) => {
             console.log(item);
@@ -47,6 +48,7 @@ let app = {
         })
         console.log(str);
         productList.innerHTML = str;
+        productCount.innerHTML = this.data.productsData.length;
 
         const delBtn = document.querySelectorAll("#delete")
         delBtn.forEach(item => {
