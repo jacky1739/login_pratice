@@ -50,15 +50,13 @@ let app = {
         productList.innerHTML = str;
         productCount.innerHTML = this.data.productsData.length;
 
-        const delBtn = document.querySelectorAll("#delete")
-        delBtn.forEach(item => {
-            console.log('click')
-        })
+        
     },
     deleteItem(){
         const id = e.target.dataset.id;
-        axios.delete(`${url}/api/${path}/admin/order/${id}`).then((res)=>{
+        axios.delete(`${url}api/${path}/admin/order/${id}`).then((res)=>{
             console.log(res);
+            this.render();
         })
 
     },

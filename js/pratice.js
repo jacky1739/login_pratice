@@ -1,8 +1,7 @@
 const path = 'jacky';
 const url = 'https://vue3-course-api.hexschool.io/';
 
-// 帳號 jacky123789456@gmail.com    
-// 密碼 jacky2360960
+
 
 let app = {
         data: {
